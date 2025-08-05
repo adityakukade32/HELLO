@@ -16,7 +16,7 @@ const App = () => {
   const { authUser } = useContext(AuthContext);
 
   return (
-    <div className="bg-[url('./src/public/bgImage.svg')] bg-contain">
+    <div className="bg-[url('./bgImage.svg')] bg-contain">
       <ToastContainer position="top-right" autoClose={3000} />{" "}
       {/* ✅ toast container */}
       <Routes>
