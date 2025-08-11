@@ -11,12 +11,21 @@ import ProfilePage from "./pages/ProfilePage";
 import { ToastContainer } from "react-toastify"; // ✅ import this
 import "react-toastify/dist/ReactToastify.css"; // ✅ CSS for toast
 import { AuthContext } from "../context/AuthContext";
+import assets from "./assets/assets";
 
 const App = () => {
   const { authUser } = useContext(AuthContext);
 
   return (
-    <div className="bg-[url('./bgImage.svg')] bg-contain">
+    <div 
+      className="min-h-screen"
+      style={{ 
+        backgroundImage: `url(${assets.bgImage})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center"
+      }}
+    >
       <ToastContainer position="top-right" autoClose={3000} />{" "}
       {/* ✅ toast container */}
       <Routes>
